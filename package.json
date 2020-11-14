@@ -1,6 +1,6 @@
 {
   "name": "remark-autolink-references",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "remark plugin to autolink custom references",
   "license": "MIT",
   "files": [
