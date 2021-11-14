@@ -1,5 +1,5 @@
 import test from 'tape'
-import remark from 'remark'
+import { remark } from 'remark'
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
@@ -30,12 +30,14 @@ test('lints', function (t) {
 
   run('00-basic-input', '00-basic-input', options, function (err, { file, actual, expected }) {
     t.ifError(err)
-    t.is(actual, expected)
+    t.is(actual, expected.replace('[JIRA-9]', '\\[JIRA-9]'))
     t.same(file.messages.map(String), [
-      `${file.path}:1:1-20:53: Reference JIRA-1 must be a link`,
-      `${file.path}:1:1-20:53: Reference JIRA-2 must be a link`,
-      `${file.path}:1:1-20:53: Reference JIRA-123 must be a link`,
-      `${file.path}:1:1-20:53: Reference JIRA-0 must be a link`
+      `${file.path}:1:1-30:41: Reference JIRA-1 must be a link`,
+      `${file.path}:1:1-30:41: Reference JIRA-2 must be a link`,
+      `${file.path}:1:1-30:41: Reference JIRA-123 must be a link`,
+      `${file.path}:1:1-30:41: Reference JIRA-0 must be a link`,
+      `${file.path}:1:1-30:41: Reference JIRA-10 must be a link`,
+      `${file.path}:1:1-30:41: Reference JIRA-10 must be a link`
     ])
     t.end()
   })
@@ -63,7 +65,13 @@ function run (inputFixture, outputFixture, options, test) {
   const expected = normalize(fs.readFileSync(outputFile, 'utf8'))
 
   remark()
-    .use({ settings: { fences: true, listItemIndent: '1' } })
+    .use({
+      settings: {
+        fences: true,
+        listItemIndent: 'one',
+        bullet: '-'
+      }
+    })
     .use(mockFile)
     .use(plugin, options)
     .process(input, function (err, file) {
