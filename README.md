@@ -5,7 +5,7 @@
 [![npm status](http://img.shields.io/npm/v/remark-autolink-references.svg)](https://www.npmjs.org/package/remark-autolink-references)
 [![node](https://img.shields.io/node/v/remark-autolink-references.svg)](https://www.npmjs.org/package/remark-autolink-references)
 [![Test](https://img.shields.io/github/workflow/status/vweevers/remark-autolink-references/Test?label=test)](https://github.com/vweevers/remark-autolink-references/actions/workflows/test.yml)
-[![JavaScript Style Guide](https://img.shields.io/badge/standard-informational?logo=javascript&logoColor=fff)](https://standardjs.com)
+[![JavaScript Style Guide](https://img.shields.io/badge/standard-informational?logo=javascript\&logoColor=fff)](https://standardjs.com)
 [![Markdown Style Guide](https://img.shields.io/badge/hallmark-informational?logo=markdown)](https://github.com/vweevers/hallmark)
 [![Common Changelog](https://common-changelog.org/badge.svg)](https://common-changelog.org)
 

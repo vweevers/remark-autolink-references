@@ -1,12 +1,13 @@
 {
   "name": "remark-autolink-references",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "remark plugin to autolink custom references",
   "license": "MIT",
   "type": "module",
   "exports": "./index.js",
   "files": [
-    "index.js"
+    "index.js",
+    "CHANGELOG.md"
   ],
   "scripts": {
     "test": "standard && depcheck && hallmark && node test"
