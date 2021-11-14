@@ -1,6 +1,4 @@
-'use strict'
-
-module.exports = function autolinkReferences (options) {
+export default function autolinkReferences (options) {
   options = options || {}
 
   // This prefix appended by a number will generate a link.

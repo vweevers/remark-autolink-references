@@ -1,10 +1,11 @@
-'use strict'
+import test from 'tape'
+import remark from 'remark'
+import fs from 'fs'
+import path from 'path'
+import { fileURLToPath } from 'url'
+import plugin from '../index.js'
 
-const test = require('tape')
-const remark = require('remark')
-const fs = require('fs')
-const path = require('path')
-const plugin = require('..')
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 test('fixes', function (t) {
   const options = {
@@ -56,8 +57,8 @@ test('does not warn if all references are linked', function (t) {
 })
 
 function run (inputFixture, outputFixture, options, test) {
-  const inputFile = path.join(__dirname, 'fixture', inputFixture + '.md')
-  const outputFile = path.join(__dirname, 'fixture', outputFixture + '.md')
+  const inputFile = new URL('./fixture/' + inputFixture + '.md', import.meta.url)
+  const outputFile = new URL('./fixture/' + outputFixture + '.md', import.meta.url)
   const input = normalize(fs.readFileSync(inputFile, 'utf8'))
   const expected = normalize(fs.readFileSync(outputFile, 'utf8'))
 

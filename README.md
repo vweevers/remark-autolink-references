@@ -1,6 +1,6 @@
 # remark-autolink-references
 
-**[`remark`](https://github.com/remarkjs/remark) plugin to autolink custom references [like GitHub Pro](https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/configuring-autolinks-to-reference-external-resources).** Ideal for referencing external issue trackers in changelogs.
+**[`remark`](https://github.com/remarkjs/remark) plugin to autolink custom references like [GitHub Pro](https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/configuring-autolinks-to-reference-external-resources) does.** Ideal for referencing external issue trackers in changelogs.
 
 [![npm status](http://img.shields.io/npm/v/remark-autolink-references.svg)](https://www.npmjs.org/package/remark-autolink-references)
 [![node](https://img.shields.io/node/v/remark-autolink-references.svg)](https://www.npmjs.org/package/remark-autolink-references)
@@ -18,9 +18,11 @@ npm install remark-autolink-references
 
 ## Usage with [`remark`](https://remark.js.org/)
 
+_This package is ESM-only._
+
 ```js
-const remark = require('remark')
-const autolink = require('remark-autolink-references')
+import remark from 'remark'
+import autolink from 'remark-autolink-references'
 
 remark()
   .use(autolink, {
@@ -113,4 +115,6 @@ Options:
 
 ## License
 
-[MIT](LICENSE) © Vincent Weevers. Adapted from [`remark-github`](https://github.com/remarkjs/remark-github) © 2015 Titus Wormer.
+[MIT](LICENSE).
+
+Adapted from [`remark-github`](https://github.com/remarkjs/remark-github) © 2015 Titus Wormer.

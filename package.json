@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "remark plugin to autolink custom references",
   "license": "MIT",
+  "type": "module",
+  "exports": "./index.js",
   "files": [
     "index.js"
   ],
@@ -21,7 +23,7 @@
     "url": "https://github.com/vweevers/remark-autolink-references.git"
   },
   "engines": {
-    "node": ">=10"
+    "node": ">=12.20"
   },
   "keywords": [
     "remark",
