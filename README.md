@@ -41,7 +41,7 @@ Results in:
 - Example ([JIRA-4275](https://example.atlassian.net/browse/JIRA-4275))
 ```
 
-Set `fix` to false to only warn about unlinked references:
+Set `fix` to false to only warn about unlinked references, thus acting as a linter:
 
 ```js
 remark()
