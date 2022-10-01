@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "depcheck": "^1.2.0",
-    "hallmark": "^3.0.0",
+    "hallmark": "^4.2.0",
     "remark": "^14.0.1",
     "standard": "^17.0.0",
     "tape": "^5.0.1"
