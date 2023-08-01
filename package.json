@@ -13,7 +13,7 @@
     "test": "standard && depcheck && hallmark && node test"
   },
   "dependencies": {
-    "mdast-util-find-and-replace": "^2.1.0"
+    "mdast-util-find-and-replace": "^3.0.0"
   },
   "devDependencies": {
     "depcheck": "^1.2.0",
